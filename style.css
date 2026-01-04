@@ -516,7 +516,12 @@ border-bottom: 1px transparent;
 
 
 /* Mobile devices (below 768px) */
+
+/* Mobile devices (below 768px) */
 @media (max-width: 768px) {
+    nav {
+        padding: 0.5rem 0;
+    }
     nav .menuItems {
         flex-wrap: wrap;
         justify-content: center;
@@ -534,4 +539,47 @@ border-bottom: 1px transparent;
         font-size: 15px;
         padding: 0.25rem 0.5rem;  /* Add some padding for easier tapping */
     }
+    /* Header - stack everything vertically */
+    .header-container {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .header-left,
+    .header-center,
+    .header-right {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .header-left {
+        font-size: 13px;
+        order: 1;  /* University name first */
+    }
+    
+    .header-center {
+        order: 2;  /* Your name second */
+    }
+    
+    header h1 {
+        font-size: 20px;
+        margin: 0;
+    }
+    
+    .header-right {
+        order: 3;  /* Icons last */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+    }
+    
+    .contact-link {
+        font-size: 20px;
+        margin: 0.25rem 0.5rem;
+    }
+    
 }
