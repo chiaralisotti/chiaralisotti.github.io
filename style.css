@@ -519,6 +519,55 @@ border-bottom: 1px transparent;
 
 /* Mobile devices (below 768px) */
 @media (max-width: 768px) {
+    /* Header - force vertical stacking */
+    header {
+        padding: 1rem 0;
+    }
+    
+    .header-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .header-left,
+    .header-center,
+    .header-right {
+        flex: none !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .header-left {
+        font-size: 13px;
+        display: block;
+    }
+    
+    .header-center {
+        display: block;
+    }
+    
+    header h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .header-right {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+    }
+    
+    .contact-link {
+        font-size: 20px;
+        margin: 0.25rem 0.5rem;
+        display: inline-block;
+    }
+    
     nav {
         padding: 0.5rem 0;
     }
@@ -538,43 +587,6 @@ border-bottom: 1px transparent;
     nav .menuItems li a {
         font-size: 15px;
         padding: 0.25rem 0.5rem;  /* Add some padding for easier tapping */
-    }
-    /* Header - stack everything vertically */
-    .header-container {
-        flex-direction: column;
-        gap: 0.75rem;
-        padding: 1rem 0.5rem;
-    }
-    
-    .header-left,
-    .header-center,
-    .header-right {
-        flex: none;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .header-left {
-        font-size: 13px;
-        order: 1;  /* University name first */
-    }
-    
-    .header-center {
-        order: 2;  /* Your name second */
-    }
-    
-    header h1 {
-        font-size: 20px;
-        margin: 0;
-    }
-    
-    .header-right {
-        order: 3;  /* Icons last */
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        margin-top: 0.5rem;
     }
     
     .contact-link {
