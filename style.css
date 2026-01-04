@@ -581,5 +581,50 @@ border-bottom: 1px transparent;
         font-size: 20px;
         margin: 0.25rem 0.5rem;
     }
+
+    /* Main content - stack image and text vertically */
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        margin: 2rem 1rem;
+    }
+    
+    .main-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .main-text h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .main-text .role {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .main-text p {
+        font-size: 1rem;
+    }
+    
+    /* Content container */
+    .content-container {
+        padding: 1.5rem;
+        margin: 1.5rem 0.5rem;
+    }
+    
+    .content-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-container h3 {
+        font-size: 1.2rem;
+    }
+    
+    .content-container p {
+        font-size: 0.95rem;
+    }
     
 }
