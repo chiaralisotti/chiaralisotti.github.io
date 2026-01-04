@@ -1,0 +1,500 @@
+body {
+    font-family: Roboto;
+    color: #fffaee;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #fffaee;
+    background: linear-gradient(#0c042b, #2c0619);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    background-size: 100%;
+    width: 100%;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+.main-content { 
+    max-width: 1100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+    background: #380920;
+    padding: 3rem;
+    border-radius: 5px;}  
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .main-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 253, 253, 0.4);
+} */
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-text h2 {
+    font-size: 2rem;
+    color: #cbd5e6;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.main-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #cbd5e6;
+    margin: 0;
+    font-weight: 300;
+}
+
+.main-text .role {
+    font-size: 1.3rem;
+    color: #d13f63;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .main-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+header {
+    background: transparent;
+    font-size: 1rem;
+    color: #cbd5e6;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    flex: 1;
+}
+
+.header-left {
+    text-align: left;
+    font-size: 25px;
+    color: #cbd5e6;
+}
+
+.header-center {
+    text-align: center;
+}
+
+.header-right {
+    text-align: right;
+    font-size: 16px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.header-link {
+    text-decoration: none;
+    color: #cbd5e6;
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #cbd5e6;
+    transition: color 0.3s ease;
+    margin: 0 0.75rem;
+    font-size: 20px;  /* Make icons bigger */
+}
+
+.contact-link:hover {
+    color: #b71d1d;
+}
+
+.contact-link i {
+    display: inline-block;
+}
+
+.separator {
+    color: #cbd5e6;
+    margin: 0 0.25rem;
+}
+
+/* header h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Center the content */
+    /* align-items: center; /* Vertically center */
+    /* text-align: center; Center text */
+    /* padding: 20px; */
+    /* position: relative; */ 
+/* } */
+
+/* .main-text { */
+    /* text-align: left; */
+    /* max-width: 50%; Limit width of text block */
+    /* margin-right: 20px; Space between text and image */
+/* } */
+
+/* .main-image { */
+    /* max-width: 15%; Ensure the image fits within the container */
+    /* height: auto;    Maintain the aspect ratio */
+    /* display: block;  Remove extra space below the image */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Optional: Add shadow effect */
+/* } */
+
+/* footer { */
+    /* background: #4d4841; */
+    /* color: #fffaee;
+    padding: 0.05rem 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+
+/* Permanent Sidebar - Icons Only */
+/* .sidebar-icons {
+    width: 5%;
+    background: #6e2233;
+    color: #fffaee;
+    position: fixed;
+    height: 100%;
+    top: 20;
+    left: 0;
+    padding-top: 1rem;
+    z-index: 100;
+    transition: width 0.3s;
+} */
+
+/* .sidebar-icons a {
+    padding: 1rem;
+    display: block;
+    color: #fffaee;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.sidebar-icons a:hover {
+    background: #4e1824;
+} */
+
+/* Sliding Sidebar - Text Visible on Hover */
+/* .sidebar-text {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 20;
+    left: 5%;
+    align-items: center;  /* Align icon and text vertically */
+    /* background: #4e1824;
+    color: #fffaee;
+    padding-top: 1rem;
+    overflow-x: hidden;
+    transition: width 0.3s ease; */
+/* } */
+
+/* .sidebar-text a { */
+    /* display: flex; */ */
+    /* align-items: center;  Align icon and text vertically */
+    /* padding: 1rem;
+    color: #fffaee;
+    text-decoration: none;
+    font-size: 1.5rem; */
+    /* margin-top: 0.65rem;  Optional: Add space between links */
+/* } */
+/* 
+.sidebar-icons a:hover + .sidebar-text {
+    width: 15%;
+} */
+
+/* Open/Close Sidebar Button */
+/* .toggle-btn {
+    background: #6e2233;
+    color: #fffaee;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 0rem;  Adjust position as needed
+    left: 0rem; Adjust position as needed */
+    /* z-index: 110;
+}
+.toggle-btn i {
+    width: 150%;
+    height: 150%;
+    display: block;
+} */
+
+        * {
+padding: 0 rem;
+margin: 0;
+}
+
+/* body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+min-height: 0vh;
+font-family: serif;
+background: linear-gradient(rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.92)),
+url('https://images.fineartamerica.com/images-medium-large-5/cygnus-constellation-1822-us-naval-observatory-library.jpg');
+} */
+
+/* div {
+color: #727272;
+text-align: center;
+}
+
+p {
+margin: 16px;
+font-size: 96px;
+color: #930a0a;
+text-transform: uppercase;
+font-weight: 600;
+transition: all 1s ease-in-out;
+position: relative;
+}
+
+p::before {
+content: attr(data-item);
+transition: all 1s ease-in-out;
+color: #8254ff;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+width: 0;
+overflow: hidden;
+}
+
+p:hover::before {
+width: 100%;
+} */
+
+nav {
+    background: #380920;
+    font-size: 0rem;
+    color: #cbd5e6;
+    width: 100%;
+    padding: 0rem 0;
+}
+
+nav .menuItems {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;  /* Changed: distributes items evenly */
+    margin: 0;
+    padding: 0;
+}
+
+nav .menuItems li {
+    margin: 20px;
+}
+
+nav .menuItems li a {
+    text-decoration: none;
+    color: #cbd5e6;
+    font-size: 24px;
+    font-weight: 250;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+nav .menuItems li a::before {
+    content: attr(data-item);
+    transition: 0.2s;
+    color: #b71d1d;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+nav .menuItems li a:hover::before {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+footer {
+position: absolute;
+font-size: 12px;
+bottom: 0;
+width: 100%;
+height: 30;
+line-height: 60px;
+font-size: 14px;
+background-color: transparent;
+color: #000000;
+text-align: center;
+}
+
+footer a {
+text-decoration: none;
+color: inherit;
+border-bottom: 1px solid;
+}
+
+footer a:hover {
+border-bottom: 1px transparent;
+}
+
+/* Content container for pages */
+.content-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem 3rem;
+    background: rgba(255, 250, 238, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.content-container h2 {
+    color: #21164e;
+    border-bottom: 2px solid #21164e;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-container h3 {
+    color: #21164e;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.content-container p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.content-container a {
+    color: #b71d1d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content-container a:hover {
+    color: #21164e;
+    text-decoration: underline;
+}
+
+/* PDF download links */
+.pdf-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ffdede;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: background 0.3s ease;
+}
+
+.pdf-link:hover {
+    background: #ffdede;
+    color: #fff;
+    text-decoration: none;
+}
+
+.pdf-link i {
+    margin-right: 0.5rem;
+}
+
+.gmail-icon {
+    color: #EA4335; /* Gmail red */
+}
+
+/*UNDER CONSTRUCTION
+/* Under Construction Banner */
+.under-construction {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem 3rem;
+    background: rgba(255, 250, 238, 0.95);
+    border-left: 5px solid #b71d1d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.under-construction h2 {
+    color: #21164e;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.under-construction p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.construction-icon {
+    font-size: 2.5rem;
+    animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+}
