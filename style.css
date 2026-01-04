@@ -602,9 +602,9 @@ border-bottom: 1px transparent;
         font-size: 20px;
         margin: 0.25rem 0.5rem;
     }
-    
+
     main {
-        padding: 1.5rem 2rem;  /* Reduced top padding */
+        padding: 0rem 2rem; 
     }
     
     .main-content {
