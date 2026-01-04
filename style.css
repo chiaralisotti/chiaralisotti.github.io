@@ -602,13 +602,16 @@ border-bottom: 1px transparent;
         font-size: 20px;
         margin: 0.25rem 0.5rem;
     }
-
-    /* Main content - stack image and text vertically */
+    
+    main {
+        padding: 1.5rem 2rem;  /* Reduced top padding */
+    }
+    
     .main-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 1.5rem;
-        margin: 2rem 1rem;
+        margin: 0 1rem;  /* Changed from 2rem to 0 on top */
     }
     
     .main-image {
