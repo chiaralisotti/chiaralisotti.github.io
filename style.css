@@ -603,17 +603,6 @@ border-bottom: 1px transparent;
         margin: 0.25rem 0.5rem;
     }
 
-    main {
-        padding: 0.5rem 2rem; 
-    }
-    
-    .main-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1.5rem;
-        margin: 0 1rem;  /* Changed from 2rem to 0 on top */
-    }
-    
     .main-image {
         max-width: 200px;
         margin: 0 auto;
@@ -650,5 +639,19 @@ border-bottom: 1px transparent;
     .content-container p {
         font-size: 0.95rem;
     }
+
+        /* Move main content closer to nav on mobile */
+    main {
+        padding: 0.5rem 1rem !important;  /* Minimal top padding */
+        min-height: auto !important;  /* Remove min-height */
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        margin: 0.5rem 1rem !important;  /* Very small top margin */
+    }
+}
     
 }
