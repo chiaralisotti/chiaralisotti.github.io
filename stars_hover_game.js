@@ -24,7 +24,13 @@ class InteractiveStars {
         this.isFirstLoad = true; 
         
         this.resize();
-        var nstars = prompt();
+
+        var nstars = prompt('How many stars would you like to see?', '5000');
+        this.interaction = prompt('What interaction would you like? Choose from: attract, repulse, orbit', 'attract'); 
+        this.nstars = nstars;  // Also store nstars for resize
+        this.radius = prompt('What interaction radius would you like?', '100');  
+        this.force = prompt('What interaction force would you like? (suggested: 0.8)', '0.8');
+
         this.createStars(nstars);
             
         window.addEventListener('resize', () => this.resize());
@@ -41,7 +47,7 @@ class InteractiveStars {
         this.canvas.height = window.innerHeight;
         
         if (!this.isFirstLoad) {
-            this.createStars(nstars, true);
+            this.createStars(this.nstars, true);
         }
         this.isFirstLoad = false;
     }
@@ -103,7 +109,7 @@ class InteractiveStars {
                 const dx = this.mouseX - star.baseX;
                 const dy = this.mouseY - star.baseY;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-                const maxDistance = 100; // Influence radius
+                const maxDistance = this.radius; // Influence radius
                 
                 // Apply subtle force that changes drift direction near mouse
                 if (distance < maxDistance) {
@@ -111,15 +117,26 @@ class InteractiveStars {
                     const angle = Math.atan2(dy, dx);
                     
                     // Instead of moving the star, change its drift velocity
-                    const forceStrength = 0.8; // How much the mouse affects drift
+                    const forceStrength = this.force; // How much the mouse affects drift
 
-                    // circular drift around mouse (counterclockwise)
-                    star.driftX += Math.cos(angle+Math.PI/2) * force * forceStrength;
-                    star.driftY += Math.sin(angle+Math.PI/2) * force * forceStrength;
+                    if (this.interaction === 'orbit') {
+
+                        // circular drift around mouse (counterclockwise)
+                        star.driftX += Math.cos(angle+Math.PI/2) * force * forceStrength;
+                        star.driftY += Math.sin(angle+Math.PI/2) * force * forceStrength;
+
+                    } else if (this.interaction === 'repulse') {
+
+                        // repel away from mouse
+                        star.driftX -= Math.cos(angle) * force * forceStrength;
+                        star.driftY -= Math.sin(angle) * force * forceStrength;
+
+                    } else if (this.interaction === 'attract') {
 
                     // attract towards mouse
-                    // star.driftX += Math.cos(angle) * force * forceStrength;
-                    // star.driftY += Math.sin(angle) * force * forceStrength;
+                    star.driftX += Math.cos(angle) * force * forceStrength;
+                    star.driftY += Math.sin(angle) * force * forceStrength;
+                    }
                     
                     // Clamp drift speed to prevent stars from going too fast
                     const maxDrift = 1;
