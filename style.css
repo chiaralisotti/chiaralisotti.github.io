@@ -673,10 +673,14 @@ border-bottom: 1px transparent;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+.gif-item a img:hover {
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
 .gif-caption {
     margin-top: 0.6rem;
     text-align: center;
     font-size: 0.9rem;
     line-height: 1.4;
 }
-    
